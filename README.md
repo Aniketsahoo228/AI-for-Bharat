@@ -2,6 +2,10 @@
 
 An intelligent platform for analyzing documents and generating personalized learning paths using AI.
 
+## 📽️ Video Tutorial 
+[Click Here](https://youtu.be/v27Sq8aGkgA)
+
+
 ## 🚀 Features
 
 - **PDF Analysis** - Upload and analyze PDF documents
