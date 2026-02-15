@@ -1,43 +1,84 @@
-# Fusion Matrix - AI-Guided Learning Platform
+# AI for Bharat - AI-Powered Learning Platform
 
-Master any technology through structured, AI-driven learning paths from plan to mastery.
+An intelligent platform for analyzing documents and generating personalized learning paths using AI.
 
 ## 🚀 Features
 
-- **Smart Notepad** - Auto-capture text from anywhere with Ctrl+C
-- **Modern UI** - Clean, professional design
-- **Responsive** - Works on all devices
+- **PDF Analysis** - Upload and analyze PDF documents
+- **Text Extraction** - Automatically extract text from PDFs
+- **AI-Powered Insights** - Generate summaries and learning workflows
+- **Modern UI** - Clean, professional interface built with React
+- **Full-Stack Integration** - Integrated frontend and backend architecture
 - **Type-Safe** - Full TypeScript support
 
 ## 📦 Quick Start
 
-```bash
-# Install dependencies
-npm install
+### Prerequisites
+- Node.js 18+
+- Python 3.8+
+- pip (Python package manager)
 
-# Start development server
+### Installation
+
+1. **Install frontend dependencies**
+```bash
+npm install
+```
+
+2. **Install backend dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Setup environment variables**
+```bash
+cp .env.example .env
+# Edit .env and add your Google API key
+```
+
+### Running the Application
+
+**Terminal 1 - Start Backend:**
+```bash
+python api/main.py
+```
+
+**Terminal 2 - Start Frontend:**
+```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+Visit `http://localhost:5173`!
+
+## 🏗️ Project Structure
+
+All development happens in the root directory. The `frontend/` subdirectory is deprecated.
+
+```
+├── api/                 # FastAPI Backend
+├── services/            # AI Services
+├── components/          # React Components
+├── pages/              # React Pages
+├── lib/                # Utilities & API client
+├── INTEGRATION_GUIDE.md # Detailed documentation
+```
 
 ## 🛠️ Technologies
 
-- **Vite** - Build tool
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **shadcn/ui** - Component library
-- **Framer Motion** - Animations
+**Frontend:** Vite, React 18, TypeScript, Tailwind CSS, Axios
+**Backend:** FastAPI, SQLAlchemy, Google Gemini API
 
-## 📝 Smart Notepad Usage
+## 📖 Full Documentation
 
-1. Click **"Launch"** button (top-right)
-2. Notepad appears in bottom-right corner
-3. Open any PDF/document/website
-4. Select text and press **Ctrl+C**
-5. Text automatically appears in notepad with timestamp!
+See [INTEGRATION_GUIDE.md](./INTEGRATION_GUIDE.md) for detailed setup and architecture.
 
-## 📄 License
+## ⚠️ Important
+
+- **DO NOT USE** the `frontend/` directory
+- Backend must run on port 8000
+- Frontend runs on port 5173
+- Configure `.env` with your API keys
+
+## 📝 License
 
 MIT License
