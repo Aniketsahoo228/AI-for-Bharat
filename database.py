@@ -7,7 +7,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 
-# Use SQLite for fast setup (no server needed)
 DATABASE_URL = "sqlite:///./study_path_maker.db"
 
 engine = create_engine(
