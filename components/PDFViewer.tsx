@@ -13,10 +13,6 @@ import {
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-/** * ✅ FIX: Correct Worker Setup for Vite/Modern Bundlers
- * Using the CDN ensures the worker version matches your package version perfectly.
- * We use .mjs for newer versions of pdfjs-dist (v4+)
- */
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface PDFViewerProps {
