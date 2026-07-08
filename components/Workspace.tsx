@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import PDFViewer from './PDFViewer';
-import { Copy, Trash2 } from 'lucide-react';
+import { ArrowLeft, Copy, Trash2 } from 'lucide-react'; // CHANGED: added ArrowLeft
 
-const Workspace = () => {
+interface WorkspaceProps { // NEW
+  onBack?: () => void;
+}
+
+const Workspace = ({ onBack }: WorkspaceProps) => { // CHANGED: accept onBack prop
   const [notes, setNotes] = useState<string[]>([]);
   const [currentNote, setCurrentNote] = useState('');
 
@@ -15,6 +19,17 @@ const Workspace = () => {
 
   return (
     <div className="fixed inset-0 bg-background pt-20">
+      {/* NEW: Back button */}
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed left-4 top-4 z-50 flex items-center gap-1 rounded-lg border border-border bg-card px-3 py-2 text-xs font-semibold text-foreground shadow-md hover:bg-secondary"
+        >
+          <ArrowLeft size={14} />
+          Back
+        </button>
+      )}
+
       <div className="flex h-full gap-4 p-4">
         {/* PDF Viewer - Left Side (70%) */}
         <div className="flex-[7]">
@@ -58,7 +73,6 @@ const Workspace = () => {
                         <button
                           onClick={() => {
                             setNotes(prev => prev.filter((_, i) => i !== index));
-                            // Rebuild currentNote without this item
                             const newNotes = notes.filter((_, i) => i !== index);
                             setCurrentNote(newNotes.join('\n\n'));
                           }}
