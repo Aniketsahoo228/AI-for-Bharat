@@ -2,6 +2,9 @@
 
 An intelligent platform for analyzing documents and generating personalized learning paths using AI.
 
+## 📖 Idea and Evolution
+See [Requirements.md](./requirements.md) for a detailed look at the motivation and vision behind this project.
+
 ## 📽️ Video Tutorial 
 [Click Here](https://youtu.be/v27Sq8aGkgA)
 
@@ -72,9 +75,6 @@ All development happens in the root directory. The `frontend/` subdirectory is d
 **Frontend:** Vite, React 18, TypeScript, Tailwind CSS, Axios
 **Backend:** FastAPI, SQLAlchemy, Google Gemini API
 
-## 📖 Full Documentation
-
-See [INTEGRATION_GUIDE.md](./INTEGRATION_GUIDE.md) for detailed setup and architecture.
 
 ## ⚠️ Important
 
