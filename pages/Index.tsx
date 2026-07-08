@@ -9,13 +9,23 @@ import Workspace from "@/components/Workspace";
 const Index = () => {
   const [showWorkspace, setShowWorkspace] = useState(false);
 
+  const handleLaunch = () => {
+    setShowWorkspace(true);
+    window.scrollTo(0, 0); // NEW: reset scroll when entering workspace
+  };
+
+  const handleBack = () => {
+    setShowWorkspace(false); // NEW: return to landing page
+    window.scrollTo(0, 0);
+  };
+
   if (showWorkspace) {
-    return <Workspace />;
+    return <Workspace onBack={handleBack} />; // CHANGED: pass onBack prop
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar onLaunchClick={() => setShowWorkspace(true)} />
+      <Navbar onLaunchClick={handleLaunch} /> {/* CHANGED: use handleLaunch */}
       <HeroSection />
       <HowItWorksSection />
       <FeaturesSection />
