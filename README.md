@@ -78,7 +78,6 @@ See [INTEGRATION_GUIDE.md](./INTEGRATION_GUIDE.md) for detailed setup and archit
 
 ## ⚠️ Important
 
-- **DO NOT USE** the `frontend/` directory
 - Backend must run on port 8000
 - Frontend runs on port 5173
 - Configure `.env` with your API keys
