@@ -67,7 +67,6 @@ All development happens in the root directory. The `frontend/` subdirectory is d
 ├── components/          # React Components
 ├── pages/              # React Pages
 ├── lib/                # Utilities & API client
-├── INTEGRATION_GUIDE.md # Detailed documentation
 ```
 
 ## 🛠️ Technologies
